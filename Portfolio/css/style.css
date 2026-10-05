@@ -1,23 +1,34 @@
 :root {
-    /* Button and hover */
-    --primary: #FFB400;
-    --dark-primary: #eff6ff;
+    /* Colors */
+    --primary-accent: #FFB400;
+    --bg-page: #F7F8FA;
+    --bg-card: #FFFFFF;
+    --text-primary: #2B2B2B;
+    --text-muted: #767676;
+    --input-bg: #E8EAEF;
 
-    /* Text of 3 types */
-    --text: #0f172a;
-    --dark-text: #334155;
-    --light-text: #64748b;
+    /* Layout & Spacing */
+    --content-max-width: 1140px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-round: 50%;
+    --shadow-card: 0 4px 18px rgba(0, 0, 0, 0.05);
 
-    /* Main Background */
-    --background: #f8fafc;
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-    /* Card, Form, and Border */
-    --white: #ffffff;
-    --border: #e2e8f0;
-
+    /* Existing stylesheet aliases */
+    --primary: var(--primary-accent);
+    --dark-primary: var(--input-bg);
+    --text: var(--text-primary);
+    --dark-text: var(--text-primary);
+    --light-text: var(--text-muted);
+    --background: var(--bg-page);
+    --white: var(--bg-card);
+    --border: var(--input-bg);
     --surface-border: 1px solid var(--border);
-    --radius: 10px;
-    --shadow: 4px 0px 10px rgba(47, 122, 249, 0.1);
+    --radius: var(--radius-md);
+    --shadow: var(--shadow-card);
 }
 
 /* --------------------------------------------------------------------------
@@ -39,7 +50,6 @@ textarea {
 }
 
 body {
-    font-size: 16px;
     background-color: var(--background);
     color: var(--text);
 }
@@ -118,6 +128,17 @@ body {
     height: 782px;
 }
 
+.hero-title {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 10px 0;
+    color: var(--text);
+}
+
+.hero-title .highlight {
+    color: var(--primary-accent);
+}
+
 .hero-content{
     padding-left: 98px;
     padding-top: 45px;
@@ -125,13 +146,8 @@ body {
     line-height: 1.1;
 }
 
-.hero h3 {
-    font-size: 48px;
-    margin: 10px 0;
-    color: var(--text);
-}
-
 .hero p{
+    font-size: 16px;
     margin: 42px 0 100px 0;
     color: var(--light-text);
 }
@@ -142,14 +158,13 @@ body {
 }
 
 /* ==================== PROJECT ==================== */
-
 .project-content{
     width: 654px;
     padding: 39px;
     justify-self: center;
 }
 
-.project-content h3{
+.project-content h2{
     margin: 21px;
     font-size: 48px;
     justify-self: center;
@@ -159,6 +174,55 @@ body {
 .project-content p{
     text-align: center;
     font-size: 18px;
+}
+
+.project-grid{
+    margin: 0 98px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.project-item{
+    width: 385px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.project-item h3{
+    padding: 16px 0 8px 10px;
+    font-size: 18px;
+    color: var(--text);
+}
+
+.project-item p{
+    padding: 0 0 16px 10px;
+    font-size: 14px;
+    color: var(--light-text);
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 16px 10px;
+}
+
+span.skill{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px;
+
+    background: var(--dark-primary);
+    border-radius: 50px;
+
+    font-size: 12px;
+    color: var(--text);
 }
 
 /* ==================== BUTTON ==================== */
