@@ -8,10 +8,10 @@
   --input-bg: #E8EAEF;
 
   /* Layout & Spacing */
-  --radius-sm: 6px;
-  --radius-md: 10px;
+  --radius-sm: 5.274px;
+  --radius-md: 8.79px;
   --radius-round: 50%;
-  --shadow-card: 0 4px 18px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 3.516px 15.822px rgba(47, 122, 249, 0.1);
 
   /* Typography */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -30,18 +30,17 @@ body {
   z-index: 100;
   background-color: var(--bg-card);
   box-shadow: var(--shadow-card);
-  padding: 34.2px 86.4px;
+  padding: 33.402px 84.384px;
 }
 
 .navbar {
-  max-width: var(--content-max-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo img {
-  height: 68.4px;
+  height: 66.804px;
   width: auto;
   object-fit: contain;
 }
@@ -49,12 +48,11 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  width: 604px;
-  justify-content: space-between;
+  gap: 30.90564px;
 }
 
 .nav-link {
-  font-size: 15px;
+  font-size: 13.185px;
   font-weight: 500;
   color: var(--text-primary);
   border-radius: var(--radius-sm);
@@ -69,7 +67,7 @@ body {
   background-color: var(--primary-accent);
   color: var(--text-primary);
   font-weight: 600;
-  padding: 10px 14px;
+  padding: 8.79px 12.306px;
 }
 
 /* ==================== 2. HERO SECTION ==================== */
