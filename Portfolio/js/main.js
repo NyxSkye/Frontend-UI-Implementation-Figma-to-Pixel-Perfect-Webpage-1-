@@ -3,7 +3,6 @@
    1. Navbar: active link on click + scroll-spy
    2. Recommendations: infinite side-scrolling carousel
    3. Contact form validation
-   4. Footer year
    ========================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {

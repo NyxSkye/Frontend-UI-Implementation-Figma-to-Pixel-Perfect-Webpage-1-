@@ -372,7 +372,7 @@ section[id] {
 
 .contact-form {
   background: var(--bg-card);
-  padding: 22px 37px 40px;
+  padding: 22px 37px 0;
   align-self: start;
 }
 
@@ -429,7 +429,7 @@ section[id] {
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 15px;
 }
 
 .info-card {
@@ -470,17 +470,39 @@ section[id] {
 
 .info-card dd a:hover { color: var(--primary-accent); }
 
+/* ==================== 6. PARTNERS ==================== */
+.partners {
+  padding: 30px 0 50px;
+}
+
+.partners-container {
+  margin: 0 97px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 24px;
+}
+
+.partners-container img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 900px) {
   .projects-container,
   .recommendation-container,
-  .contact-container { margin-left: 24px; margin-right: 24px; }
+  .contact-container,
+  .partners-container { margin-left: 24px; margin-right: 24px; }
   .slider { margin: 0 24px; }
   .rec-card { flex-basis: 300px; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-grid .contact-heading:nth-child(2) { margin-top: 40px; order: 3; }
   .contact-form { order: 2; }
   .contact-info { order: 4; }
+  .partners-container { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
