@@ -72,23 +72,24 @@ body {
 
 /* ==================== 2. HERO SECTION ==================== */
 .hero {
-  padding-top: 81px;
+  position: relative;
+  height: 553.77px;
+  padding: 71.199px 84.384px;
   background: var(--bg-card);
-  height: 630px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .hero-content {
+  font-size: 14.064px;
   width: 50%;
-  padding-left: 98px;
-  padding-top: 45px;
+  padding-top: 39.555px;
   position: absolute;
-  line-height: 1.1;
 }
 
 .hero-title {
-  font-size: 48px;
-  line-height: 1.2;
-  margin: 10px 0;
+  font-size: 42.192px;
+  line-height: 1.236;
   color: var(--text-primary);
 }
 
@@ -97,18 +98,16 @@ body {
 }
 
 .hero-description {
-    font-size: 16px;
-    margin: 42px 0 100px 0;
-    color: var(--text-muted);
+  margin: 58.014px 0 92.295px 0;
+  color: var(--text-muted);
 }
 
 .btn {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 14.064px 28.128px;
   background-color: var(--primary-accent);
   color: var(--text-primary);
   font-weight: 700;
-  font-size: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: var(--radius-sm);
@@ -119,15 +118,17 @@ body {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(255, 180, 0, 0.35);
+  box-shadow: 0 5.274px 12.306px rgba(255, 180, 0, 0.35);
 }
 
 /* Hero Artboard & Floating Geometrics */
 
 .hero-image {
   position: absolute;
-  justify-self: right;
-  height: auto;
+  bottom: 0;
+  right: 0;
+  height: 483.81px; /* Truncated from 483.81039px for standard CSS precision */
+  display: flex;
 }
 
 /* ==================== 3. PROJECTS SHOWCASE ==================== */
