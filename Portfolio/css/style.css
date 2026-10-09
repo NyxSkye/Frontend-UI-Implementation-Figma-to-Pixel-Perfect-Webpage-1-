@@ -490,12 +490,86 @@ section[id] {
   object-fit: contain;
 }
 
+/* ==================== 7. FOOTER ==================== */
+.footer {
+  padding: 40px 0 36px;
+}
+
+.footer-container {
+  margin: 0 97px;
+}
+
+.footer-logo img {
+  height: 66px;
+  width: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 465px 310px 344px 1fr;
+  margin-top: 56px;
+}
+
+.footer-ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-ratings img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 4px;
+}
+
+.footer-ratings figcaption {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.footer-col li {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.footer-col a:hover { color: var(--primary-accent); }
+
+.footer-social li { margin-bottom: 12px; }
+.footer-social img { height: 24px; width: auto; }
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 36px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.copy-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--text-muted);
+  border-radius: var(--radius-round);
+  font-size: 11px;
+}
+
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 900px) {
   .projects-container,
   .recommendation-container,
   .contact-container,
-  .partners-container { margin-left: 24px; margin-right: 24px; }
+  .partners-container,
+  .footer-container { margin-left: 24px; margin-right: 24px; }
   .slider { margin: 0 24px; }
   .rec-card { flex-basis: 300px; }
   .contact-grid { grid-template-columns: 1fr; }
@@ -503,9 +577,11 @@ section[id] {
   .contact-form { order: 2; }
   .contact-info { order: 4; }
   .partners-container { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; row-gap: 36px; }
 }
 
 @media (max-width: 600px) {
   .rec-card { flex-basis: 82vw; }
   .rec-avatar { width: 72px; height: 72px; }
+  .footer-grid { grid-template-columns: 1fr; }
 }
