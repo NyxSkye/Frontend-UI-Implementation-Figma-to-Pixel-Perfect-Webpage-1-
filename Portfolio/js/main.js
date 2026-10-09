@@ -2,11 +2,14 @@
    Portfolio – main.js
    1. Navbar: active link on click + scroll-spy
    2. Recommendations: infinite side-scrolling carousel
+   3. Contact form validation
+   4. Footer year
    ========================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initRecommendationSlider();
+  initContactForm();
 });
 
 /* ---------- 1. NAVIGATION ---------- */
@@ -223,3 +226,65 @@ function initRecommendationSlider() {
   window.addEventListener('load', () => setTransform(offsetFor(pos), false));
 }
 
+/* ---------- 3. CONTACT FORM ---------- */
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  const status = document.getElementById('formStatus');
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const setError = (input, message) => {
+    const field = input.closest('.field');
+    const error = field.querySelector('.field-error');
+    field.classList.toggle('invalid', Boolean(message));
+    input.setAttribute('aria-invalid', Boolean(message));
+    if (error) error.textContent = message || '';
+  };
+
+  const validate = () => {
+    const name = form.fullName;
+    const email = form.email;
+    let ok = true;
+
+    if (!name.value.trim()) {
+      setError(name, 'Enter your full name.');
+      ok = false;
+    } else setError(name, '');
+
+    if (!email.value.trim()) {
+      setError(email, 'Enter your email address.');
+      ok = false;
+    } else if (!emailPattern.test(email.value.trim())) {
+      setError(email, 'Enter a valid email address, like name@example.com.');
+      ok = false;
+    } else setError(email, '');
+
+    return ok;
+  };
+
+  ['fullName', 'email'].forEach((id) => {
+    form[id].addEventListener('input', () => {
+      if (form[id].closest('.field').classList.contains('invalid')) validate();
+    });
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    status.className = 'form-status';
+    status.textContent = '';
+
+    if (!validate()) {
+      status.textContent = 'Fix the highlighted fields and send again.';
+      return;
+    }
+
+    // TODO: send `data` to your backend or a form service (Formspree, EmailJS, etc.)
+    const data = Object.fromEntries(new FormData(form).entries());
+    console.log('Contact form submitted:', data);
+
+    status.classList.add('success');
+    status.textContent = 'Message sent. I will get back to you soon.';
+    form.reset();
+  });
+}
