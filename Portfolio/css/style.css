@@ -8,7 +8,6 @@
   --input-bg: #E8EAEF;
 
   /* Layout & Spacing */
-  --content-max-width: 1140px;
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-round: 50%;
@@ -31,20 +30,18 @@ body {
   z-index: 100;
   background-color: var(--bg-card);
   box-shadow: var(--shadow-card);
+  padding: 34.2px 86.4px;
 }
 
 .navbar {
   max-width: var(--content-max-width);
-  margin: 0 auto;
-  height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
 }
 
 .logo img {
-  height: 48px;
+  height: 68.4px;
   width: auto;
   object-fit: contain;
 }
@@ -52,14 +49,14 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  width: 604px;
+  justify-content: space-between;
 }
 
 .nav-link {
   font-size: 15px;
   font-weight: 500;
   color: var(--text-primary);
-  padding: 8px 18px;
   border-radius: var(--radius-sm);
   transition: color 0.25s ease, background-color 0.25s ease;
 }
@@ -72,6 +69,7 @@ body {
   background-color: var(--primary-accent);
   color: var(--text-primary);
   font-weight: 600;
+  padding: 10px 14px;
 }
 
 /* ==================== 2. HERO SECTION ==================== */
