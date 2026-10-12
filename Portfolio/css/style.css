@@ -254,7 +254,7 @@ body {
 }
 
 .rec-card {
-  flex: 0 0 289.75px;
+  flex: 0 0 303.39px;
   padding: 23.733px 21.975px;
   padding-right: 0;
   background: var(--bg-card);
@@ -301,7 +301,7 @@ body {
 .rec-name {
   font-size: 17px;
   font-weight: 500;
-  margin: 2px;
+  margin-bottom: 2px;
 }
 
 .rec-role {
