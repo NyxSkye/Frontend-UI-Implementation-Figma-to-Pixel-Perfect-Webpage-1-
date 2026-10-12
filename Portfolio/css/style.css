@@ -81,6 +81,7 @@ body {
 }
 
 .hero-content {
+  text-transform: capitalize;
   font-size: 14px;
   width: 42%;
   padding-top: 39.555px;
