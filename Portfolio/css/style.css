@@ -320,6 +320,7 @@ body {
 .dot {
   width: 9px;
   height: 9px;
+  border: 0;
   border-radius: var(--radius-round);
   background: #FFDF8C;
   cursor: pointer;
@@ -376,6 +377,7 @@ body {
 .field textarea {
   display: block;
   width: 100%;
+  border: 0;
   border-radius: 2px;
   background: var(--input-bg);
   color: var(--text-primary);
@@ -402,6 +404,7 @@ body {
 .btn-sm {
   padding: 14px 22px;
   font-size: 13px;
+  border: 0;
   border-radius: 2px;
 }
 
