@@ -339,11 +339,11 @@ body {
 
 /* ==================== 5. CONTACT ==================== */
 .contact {
-  padding: 30px 0 70px;
+  padding: 50px 0 70px;
 }
 
 .contact-container {
-  margin: 0 97px;
+  margin: 0 85.263px;
 }
 
 .contact-grid {
@@ -353,24 +353,24 @@ body {
 }
 
 .contact-heading {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
   margin-bottom: 40px;
 }
 
 .contact-form {
   background: var(--bg-card);
-  padding: 22px 37px 0;
+  padding: 0 33px 0;
   align-self: start;
 }
 
-.field { margin-bottom: 22px; }
+.field { margin-top: 17px; }
 
 .field label {
   display: block;
   font-size: 16px;
   color: var(--text-muted);
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 
 .field input,
@@ -378,16 +378,16 @@ body {
   display: block;
   width: 100%;
   border: 0;
-  border-radius: 2px;
+  border-radius: var(--radius-sm);
   background: var(--input-bg);
   color: var(--text-primary);
   padding: 0 16px;
-  height: 51px;
+  height: 43.95px;
   font-size: 15px;
 }
 
 .field textarea {
-  height: 208px;
+  height: 184.59px;
   padding: 14px 16px;
   resize: vertical;
 }
@@ -402,10 +402,11 @@ body {
 }
 
 .btn-sm {
-  padding: 14px 22px;
-  font-size: 13px;
+  margin-top: 19px;
+  padding: 14px 18px;
+  font-size: 12px;
   border: 0;
-  border-radius: 2px;
+  border-radius: var(--radius-sm);
 }
 
 .form-status {
@@ -423,14 +424,15 @@ body {
 
 .info-card {
   background: var(--bg-card);
-  padding: 28px 24px 22px;
+  padding: 22px;
+  padding-bottom: 11px;
 }
 
 .info-icon {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   margin: 0 auto 26px;
   border-radius: var(--radius-round);
   background: var(--primary-accent);
@@ -442,16 +444,18 @@ body {
   justify-content: space-between;
   align-items: baseline;
   gap: 12px;
-  margin-top: 16px;
+  margin-top: 11px;
 }
-.info-card dl > div:first-child { margin-top: 0; }
 
 .info-card dt {
+  letter-spacing: 0.5px;
   font-size: 15px;
   font-weight: 500;
+  align-self: center;
 }
 
 .info-card dd {
+  letter-spacing: 0.15px;
   font-size: 13px;
   color: var(--text-muted);
   text-align: right;
@@ -461,7 +465,7 @@ body {
 
 /* ==================== 6. PARTNERS ==================== */
 .partners {
-  padding: 30px 0 50px;
+  padding: 0 50px;
 }
 
 .partners-container {
