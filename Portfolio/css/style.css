@@ -339,7 +339,7 @@ body {
 
 /* ==================== 5. CONTACT ==================== */
 .contact {
-  padding: 50px 0 70px;
+  padding: 50px 0 55px;
 }
 
 .contact-container {
@@ -464,32 +464,29 @@ body {
 .info-card dd a:hover { color: var(--primary-accent); }
 
 /* ==================== 6. PARTNERS ==================== */
-.partners {
-  padding: 0 50px;
-}
 
 .partners-container {
-  margin: 0 97px;
+  margin: 0 206.565px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-items: center;
-  gap: 24px;
+  gap: 125px;
 }
 
 .partners-container img {
-  height: 80px;
+  height: 126.576px;
   width: auto;
   object-fit: contain;
 }
 
 /* ==================== 7. FOOTER ==================== */
 .footer {
-  padding: 40px 0 36px;
+  padding: 40px 0;
 }
 
 .footer-container {
-  margin: 0 97px;
+  margin: 0 85.263px;
 }
 
 .footer-logo img {
