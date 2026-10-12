@@ -313,14 +313,13 @@ body {
 .slider-dots {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 48px;
+  gap: 8px;
+  margin-top: 38px;
 }
 
 .dot {
   width: 9px;
   height: 9px;
-  padding: 0;
   border-radius: var(--radius-round);
   background: #FFDF8C;
   cursor: pointer;
