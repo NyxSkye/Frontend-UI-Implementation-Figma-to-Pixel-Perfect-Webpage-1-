@@ -496,7 +496,7 @@ body {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 465px 310px 344px 1fr;
+  grid-template-columns: 408px 274px 302px 1fr;
   margin-top: 44px;
 }
 
@@ -517,14 +517,15 @@ body {
 }
 
 .footer-col h4 {
+  letter-spacing: 1px;
   font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .footer-col li {
   font-size: 14px;
-  margin-bottom: 14px;
+  margin-bottom: 7px;
 }
 
 .footer-col a:hover { color: var(--primary-accent); }
@@ -537,7 +538,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 36px;
+  margin-top: 21px;
   font-size: 13px;
   color: var(--text-muted);
 }
