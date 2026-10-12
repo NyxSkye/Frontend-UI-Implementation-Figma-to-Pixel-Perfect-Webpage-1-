@@ -1,7 +1,7 @@
 :root {
   /* Colors */
   --primary-accent: #FFB400;
-  --bg-page: #F7F8FA;
+  --bg-page: #3e434d;
   --bg-card: #FFFFFF;
   --text-primary: #2B2B2B;
   --text-muted: #767676;
@@ -30,7 +30,7 @@ body {
   z-index: 100;
   background-color: var(--bg-card);
   box-shadow: var(--shadow-card);
-  padding: 33.402px 84.384px;
+  padding: 32.75px 84px;
 }
 
 .navbar {
@@ -48,11 +48,11 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 30.90564px;
+  gap: 37px;
 }
 
 .nav-link {
-  font-size: 13.185px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--text-primary);
   border-radius: var(--radius-sm);
@@ -67,22 +67,22 @@ body {
   background-color: var(--primary-accent);
   color: var(--text-primary);
   font-weight: 600;
-  padding: 8.79px 12.306px;
+  padding: 9px 12px;
 }
 
 /* ==================== 2. HERO SECTION ==================== */
 .hero {
   position: relative;
   height: 553.77px;
-  padding: 71.199px 84.384px;
+  padding: 71.199px 88px;
   background: var(--bg-card);
   box-sizing: border-box;
   overflow: hidden;
 }
 
 .hero-content {
-  font-size: 14.064px;
-  width: 50%;
+  font-size: 14px;
+  width: 42%;
   padding-top: 39.555px;
   position: absolute;
 }
@@ -98,18 +98,17 @@ body {
 }
 
 .hero-description {
-  margin: 58.014px 0 92.295px 0;
+  margin: 58.014px 0 91px 0;
   color: var(--text-muted);
-  word-spacing: 2px;
 }
 
 .btn {
   display: inline-block;
-  padding: 14.064px 28.128px;
+  padding: 13px 28px;
   background-color: var(--primary-accent);
   color: var(--text-primary);
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-weight: 500;
+  letter-spacing: 0.025em;
   text-transform: uppercase;
   border-radius: var(--radius-sm);
   cursor: pointer;
@@ -133,7 +132,7 @@ body {
 
 /* ==================== 3. PROJECTS SHOWCASE ==================== */
 .projects {
-  padding: 52.74px 0;
+  padding: 50px 0;
 }
 
 .projects-container {
@@ -142,7 +141,6 @@ body {
 
 .section-header {
   text-align: center;
-  max-width: 541.464px;
   margin: 0 auto 39.555px;
 }
 
@@ -153,20 +151,21 @@ body {
 }
 
 .section-subtitle {
+  text-transform: capitalize;
   font-size: 13.185px;
   color: var(--text-muted);
   word-spacing: 1.2px;
+  letter-spacing: -0.2px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 39.555px;
+  gap: 39px;
 }
 
 .project-card {
   background: var(--bg-card);
-  border: 2px solid rgba(0, 0, 0, 0.08);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
   overflow: hidden;
@@ -177,17 +176,17 @@ body {
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10.548px 26.37px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10.548px 26.37px rgba(0, 0, 0, 0.2);
 }
 
 .project-cover {
   width: 100%;
-  height: 225.024px;
   background-color: var(--input-bg);
   overflow: hidden;
 }
 
 .project-cover img {
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -196,30 +195,35 @@ body {
 }
 
 .project-info {
-  border-top: 2px solid rgba(0, 0, 0, 0.08);
-  padding: 14.064px;
+  text-transform: capitalize;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  padding: 12px 14px 15px 14px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
 }
 
 .project-title {
-  font-size: 14.064px;
+  font-size: 14px;
   font-weight: 600;
-  margin-bottom: 3.516px;
+  margin-bottom: 1px;
   color: var(--text-primary);
 }
 
 .project-desc {
-  font-size: 12.306px;
+  font-size: 12px;
+  word-spacing: 1px;
+  line-height: 1.7;
   color: var(--text-muted);
-  margin-bottom: 10.548px;
+  margin-bottom: 8px;
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 5.274px;
+  gap: 9px;
 }
 
 .tag {
@@ -227,23 +231,16 @@ body {
   align-items: center;
   background: var(--input-bg);
   color: var(--text-primary);
-  font-size: 10.548px;
+  font-size: 11px;
   font-weight: 500;
-  padding: 5px 12px;
+  padding: 3px 12px;
   border-radius: 50px;
 }
 /* ==================== 4. RECOMMENDATIONS (infinite carousel) ==================== */
-.recommendation {
-  padding: 30px 0 60px;
-}
-
-.recommendation-container {
-  margin: 0 97px;
-}
 
 /* The viewport clips the track, so the cards at both ends are cut off */
 .slider {
-  margin: 0 97px;
+  margin: 0 85px;
   overflow: hidden;
   touch-action: pan-y;
   cursor: grab;
@@ -251,40 +248,38 @@ body {
 .slider.dragging { cursor: grabbing; }
 
 .slider-track {
-  --rec-gap: 24px;
   display: flex;
-  gap: var(--rec-gap);
-  width: max-content;
+  gap: 19.5px;
   will-change: transform;
 }
 
 .rec-card {
-  flex: 0 0 341px;
-  height: 327px;
-  padding: 34px 28px 24px;
+  flex: 0 0 289.75px;
+  padding: 23.733px 21.975px;
+  padding-right: 0;
   background: var(--bg-card);
   user-select: none;
 }
 
 .rec-stars {
   color: var(--primary-accent);
-  font-size: 22px;
+  font-size: 17.6px;
   line-height: 1;
   letter-spacing: 2px;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .rec-title {
-  font-size: 18px;
+  font-size: 15.822px;
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .rec-text {
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.75;
   color: var(--text-muted);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .rec-author {
@@ -294,23 +289,23 @@ body {
 }
 
 .rec-avatar {
-  width: 88px;
-  height: 88px;
+  justify-content: flex-start;
+  width: 80px;
+  height: 73px;
   flex-shrink: 0;
   border-radius: var(--radius-round);
   object-fit: cover;
   background-color: var(--input-bg);
-  pointer-events: none;
 }
 
 .rec-name {
   font-size: 17px;
   font-weight: 500;
-  margin-bottom: 4px;
+  margin: 2px;
 }
 
 .rec-role {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-muted);
 }
 
