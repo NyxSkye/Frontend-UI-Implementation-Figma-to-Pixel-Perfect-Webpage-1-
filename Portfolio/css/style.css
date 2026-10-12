@@ -497,7 +497,7 @@ body {
 .footer-grid {
   display: grid;
   grid-template-columns: 465px 310px 344px 1fr;
-  margin-top: 56px;
+  margin-top: 44px;
 }
 
 .footer-ratings {
@@ -507,9 +507,8 @@ body {
 }
 
 .footer-ratings img {
-  height: 40px;
+  height: 35px;
   width: auto;
-  margin-bottom: 4px;
 }
 
 .footer-ratings figcaption {
