@@ -323,9 +323,11 @@ body {
   border-radius: var(--radius-round);
   background: #FFDF8C;
   cursor: pointer;
-  transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
-.dot.active { background: var(--primary-accent); }
+.dot.active {
+  background: var(--primary-accent);
+}
 
 .dot:focus-visible,
 .nav-link:focus-visible,
