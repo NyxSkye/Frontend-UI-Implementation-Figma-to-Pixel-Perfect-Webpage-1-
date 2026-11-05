@@ -1,15 +1,15 @@
 :root {
   /* Colors */
-  --primary-accent: #FFB400;
-  --bg-page: #F7F8FA;
+  --primary-accent: #0077B6;
+  --bg-page: #F8F9FA;
   --bg-card: #f6fcff;
-  --text-primary: #2B2B2B;
-  --text-muted: #f0f0f0;
+  --text: #FFFFFF;
+  --text-dark: #6C6C6C;
+  --shadow: #f0f0f0;
   --input-bg: #E8EAEF;
 
   /* Layout & Spacing */
   --radius: 100px;
-  --shadow-card: 0 3.516px 15.822px rgba(47, 122, 249, 0.1);
 
   /* Typography */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -18,7 +18,7 @@
 body {
   font-family: var(--font-family);
   background-color: var(--bg-page);
-  color: var(--text-primary);
+  color: var(--text-dark);
 }
 
 /* ==================== 1. NAVIGATION BAR ==================== */
@@ -27,9 +27,8 @@ body {
   top: 0;
   z-index: 100;
   background-color: var(--bg-card);
-  box-shadow: var(--shadow-card);
   padding: 68px 79px 58px 51px;
-  border-bottom: 5px solid var(--text-muted);
+  border-bottom: 5px solid var(--shadow);
 }
 
 .navbar {
@@ -54,7 +53,7 @@ body {
 .nav-link {
   font-size: 20px;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--text);
   border-radius: var(--radius-sm);
   transition: color 0.25s ease, background-color 0.25s ease;
 }
@@ -73,43 +72,65 @@ body {
 
 /* ==================== 2. HERO SECTION ==================== */
 .hero {
-  background-image: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(139, 139, 139, 0.7), rgba(255, 255, 255, 0.9)), 
-    url('/Wonderlust/assets/hero-bg.png');
-  background-repeat: no-repeat;
-  background-size: cover; /* or use '100% 100%' or 'contain' */
-  background-position: center bottom 250px; 
-  height: 2515.5px;
+  position: relative;
   box-sizing: border-box;
+  aspect-ratio: 1 / 2;
   overflow: hidden;
 }
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('../assets/hero-bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center bottom 263px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    #F8F9FA calc(100% - 263px),
+    #F8F9FA 100%);
+}
+
 .hero-content {
+  position: relative;
+  z-index: 2;
   font-size: 60px;
   justify-self: center;
-  padding-top: 589px;
+  padding-top: 591px;
   text-align: center;
 }
 
 .hero-title {
   text-transform: uppercase;
   font-size: 130px;
-  line-height: 1.2;
+  line-height: 1.195;
   letter-spacing: -1.5px;
-  color: var(--text-primary);
+  word-spacing: -10px;
+  color: var(--text);
 }
 
 .hero-description {
-  margin: 75px 0 130px 0;
-  line-height: 1.55;
-  color: var(--text-muted);
+  margin: 75px 0 133px 0;
+  line-height: 1.545;
+  word-spacing: -5px;
+  letter-spacing: -0.5px;
+  color: var(--shadow);
 }
 
 .btn {
   display: inline-block;
   padding: 52px 110px;
   background-color: var(--primary-accent);
-  color: var(--text-primary);
+  color: var(--text);
   font-weight: 500;
   letter-spacing: 0.025em;
   border-radius: var(--radius);
@@ -117,77 +138,57 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5.274px 12.306px rgba(255, 180, 0, 0.35);
-}
-
-/* Hero Artboard & Floating Geometrics */
-
-.hero-image {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 483.81px; /* Truncated from 483.81039px for standard CSS precision */
-  display: flex;
-}
-
-/* ==================== 3. PROJECTS SHOWCASE ==================== */
-.projects {
-  padding: 50px 0;
-}
-
-.projects-container {
-  margin: 0 85.263px;
+/* ==================== 3. DESTINATIONS SHOWCASE ==================== */
+.destination-container {
+  margin: 0 55px;
 }
 
 .section-header {
+  margin: 52px 0 200px 0;
   text-align: center;
-  margin: 0 auto 39.555px;
 }
 
 .section-title {
-  font-size: 28.128px;
+  color: var(--primary-accent);
+  padding-bottom: 52px;
+  font-size: 52px;
   font-weight: 700;
-  margin-bottom: 10.548px;
+  letter-spacing: -0.8px;
 }
 
 .section-subtitle {
-  text-transform: capitalize;
-  font-size: 13.185px;
-  color: var(--text-muted);
-  word-spacing: 1.2px;
-  letter-spacing: -0.2px;
+  font-size: 52px;
+  letter-spacing: -0.6px;
+  word-spacing: 3px;
 }
 
-.project-grid {
+.destination-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 39px;
 }
 
-.project-card {
+.destination-card {
   background: var(--bg-card);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
+  border-radius: var(--radius);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
-.project-card:hover {
+.destination-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10.548px 26.37px rgba(0, 0, 0, 0.2);
 }
 
-.project-cover {
+.destination-cover {
   width: 100%;
   background-color: var(--input-bg);
   overflow: hidden;
 }
 
-.project-cover img {
+.destination-cover img {
   border: 1.5px solid rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
@@ -196,7 +197,7 @@ body {
   border-top-right-radius: var(--radius-md);
 }
 
-.project-info {
+.destination-info {
   text-transform: capitalize;
   border: 0.5px solid rgba(0, 0, 0, 0.2);
   padding: 12px 14px 15px 14px;
@@ -207,22 +208,22 @@ body {
   border-bottom-right-radius: var(--radius-md);
 }
 
-.project-title {
+.destination-title {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 1px;
-  color: var(--text-primary);
+  color: var(--text);
 }
 
-.project-desc {
+.destination-desc {
   font-size: 12px;
   word-spacing: 1px;
   line-height: 1.7;
-  color: var(--text-muted);
+  color: var(--shadow);
   margin-bottom: 8px;
 }
 
-.project-tags {
+.destination-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
@@ -232,7 +233,7 @@ body {
   display: inline-flex;
   align-items: center;
   background: var(--input-bg);
-  color: var(--text-primary);
+  color: var(--text);
   font-size: 11px;
   font-weight: 500;
   padding: 3px 12px;
@@ -280,7 +281,7 @@ body {
 .rec-text {
   font-size: 12px;
   line-height: 1.75;
-  color: var(--text-muted);
+  color: var(--shadow);
   margin-bottom: 20px;
 }
 
@@ -308,7 +309,7 @@ body {
 
 .rec-role {
   font-size: 13px;
-  color: var(--text-muted);
+  color: var(--shadow);
 }
 
 .slider-dots {
@@ -336,7 +337,7 @@ body {
 .btn:focus-visible,
 .contact-form input:focus-visible,
 .contact-form textarea:focus-visible {
-  outline: 2px solid var(--text-primary);
+  outline: 2px solid var(--text);
   outline-offset: 3px;
 }
 
@@ -372,7 +373,7 @@ body {
 .field label {
   display: block;
   font-size: 16px;
-  color: var(--text-muted);
+  color: var(--shadow);
   margin-bottom: 5px;
 }
 
@@ -383,7 +384,7 @@ body {
   border: 0;
   border-radius: var(--radius-sm);
   background: var(--input-bg);
-  color: var(--text-primary);
+  color: var(--text);
   padding: 0 16px;
   height: 43.95px;
   font-size: 15px;
@@ -415,7 +416,7 @@ body {
 .form-status {
   margin-top: 16px;
   font-size: 14px;
-  color: var(--text-muted);
+  color: var(--shadow);
 }
 .form-status.success { color: #2E8B57; }
 
@@ -439,7 +440,7 @@ body {
   margin: 0 auto 26px;
   border-radius: var(--radius-round);
   background: var(--primary-accent);
-  color: var(--text-primary);
+  color: var(--text);
 }
 
 .info-card dl > div {
@@ -460,7 +461,7 @@ body {
 .info-card dd {
   letter-spacing: 0.15px;
   font-size: 13px;
-  color: var(--text-muted);
+  color: var(--shadow);
   text-align: right;
 }
 
@@ -516,7 +517,7 @@ body {
 
 .footer-ratings figcaption {
   font-size: 11px;
-  color: var(--text-muted);
+  color: var(--shadow);
 }
 
 .footer-col h4 {
@@ -543,7 +544,7 @@ body {
   gap: 8px;
   margin-top: 21px;
   font-size: 13px;
-  color: var(--text-muted);
+  color: var(--shadow);
 }
 
 .copy-mark {
@@ -551,7 +552,7 @@ body {
   place-items: center;
   width: 18px;
   height: 18px;
-  border: 1px solid var(--text-muted);
+  border: 1px solid var(--shadow);
   border-radius: var(--radius-round);
   font-size: 11px;
 }
