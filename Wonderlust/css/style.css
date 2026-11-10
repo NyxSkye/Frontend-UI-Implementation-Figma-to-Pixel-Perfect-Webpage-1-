@@ -39,6 +39,37 @@ body {
   align-items: center;
 }
 
+.nav-menu {
+  position: relative;
+}
+
+.nav-menu-toggle {
+  display: flex;
+  width: 73px;
+  height: 73px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  padding-bottom: 12px;
+}
+
+.nav-menu-toggle span {
+  width: 73px;
+  height: 7px;
+  border-radius: 2px;
+  background-color: var(--primary-accent);
+}
+
+.nav-menu-toggle:focus-visible {
+  outline: 2px solid var(--primary-accent);
+  outline-offset: 3px;
+}
+
 .logo{
   font-size: 90px;
   font-weight: 700;
@@ -47,15 +78,41 @@ body {
 }
 
 .nav-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 101;
   display: flex;
-  align-items: center;
-  gap: 37px;
+  min-width: 220px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--shadow);
+  border-radius: 12px;
+  background-color: var(--bg-card);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.nav-menu:hover .nav-links,
+.nav-menu:focus-within .nav-links {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .nav-link {
+  display: block;
+  padding: 9px 12px;
   font-size: 20px;
   font-weight: 500;
-  color: var(--text);
+  color: var(--text-dark);
   border-radius: var(--radius-sm);
   transition: color 0.25s ease, background-color 0.25s ease;
 }
@@ -69,7 +126,11 @@ body {
   text-decoration: underline;
   text-underline-offset: 6px;
   font-weight: 600;
-  padding: 9px 12px;
+}
+
+.nav-links .btn {
+  display: block;
+  text-align: center;
 }
 
 /* ==================== 2. HERO SECTION ==================== */
