@@ -245,6 +245,7 @@ body {
 }
 
 .destination-cover {
+  position: relative;
   width: 100%;
   overflow: hidden;
 }
@@ -255,6 +256,19 @@ body {
   object-fit: cover;
   border-top-left-radius: var(--radius-md);
   border-top-right-radius: var(--radius-md);
+}
+
+.destination-price {
+  position: absolute;
+  top: 52px;
+  right: 52px;
+  padding: 0 35px;
+  background-color: var(--secondary-accent);
+  color: var(--text-dark);
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  border-radius: var(--radius-sm);
 }
 
 .destination-info {
@@ -350,6 +364,21 @@ body {
   place-items: center;
   width: 52px;
   height: 78px;
+}
+
+.top-link {
+  display:flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 12px;
+  font-size: 49px;
+  color: var(--primary-accent);
+}
+
+.footer > .footer-container > .nav-link.active {
+  display: inline-block;
+  margin-top: 24px;
+  font-size: 32px;
 }
 
 /* ==================== RESPONSIVE ==================== */
