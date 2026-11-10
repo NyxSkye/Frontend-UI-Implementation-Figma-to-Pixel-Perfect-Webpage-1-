@@ -234,7 +234,7 @@ body {
 /* ==================== 4. ABOUT ==================== */
 
 .about-container {
-  padding: 573px 50px;
+  padding: 573px 50px 315px 50px;
 }
 
 .about-card {
@@ -251,220 +251,48 @@ body {
   text-align: center;
 }
 
-/* ==================== 5. CONTACT ==================== */
-.contact {
-  padding: 50px 0 55px;
-}
-
-.contact-container {
-  margin: 0 85.263px;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 846fr) minmax(0, 372fr);
-  column-gap: 26px;
-}
-
-.contact-heading {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-.contact-form {
-  background: var(--bg-card);
-  padding: 0 33px 0;
-  align-self: start;
-}
-
-.field { margin-top: 17px; }
-
-.field label {
-  display: block;
-  font-size: 16px;
-  color: var(--shadow);
-  margin-bottom: 5px;
-}
-
-.field input,
-.field textarea {
-  display: block;
-  width: 100%;
-  border: 0;
-  border-radius: var(--radius-sm);
-  background: var(--input-bg);
-  color: var(--text);
-  padding: 0 16px;
-  height: 43.95px;
-  font-size: 15px;
-}
-
-.field textarea {
-  height: 184.59px;
-  padding: 14px 16px;
-  resize: vertical;
-}
-
-.field.invalid input { box-shadow: inset 0 0 0 2px #D64545; }
-
-.field-error {
-  min-height: 0;
-  margin-top: 6px;
-  font-size: 13px;
-  color: #D64545;
-}
-
-.btn-sm {
-  margin-top: 19px;
-  padding: 14px 18px;
-  font-size: 12px;
-  border: 0;
-  border-radius: var(--radius-sm);
-}
-
-.form-status {
-  margin-top: 16px;
-  font-size: 14px;
-  color: var(--shadow);
-}
-.form-status.success { color: #2E8B57; }
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.info-card {
-  background: var(--bg-card);
-  padding: 22px;
-  padding-bottom: 11px;
-}
-
-.info-icon {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  margin: 0 auto 26px;
-  border-radius: var(--radius-round);
-  background: var(--primary-accent);
-  color: var(--text);
-}
-
-.info-card dl > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 12px;
-  margin-top: 11px;
-}
-
-.info-card dt {
-  letter-spacing: 0.5px;
-  font-size: 15px;
-  font-weight: 500;
-  align-self: center;
-}
-
-.info-card dd {
-  letter-spacing: 0.15px;
-  font-size: 13px;
-  color: var(--shadow);
-  text-align: right;
-}
-
-.info-card dd a:hover { color: var(--primary-accent); }
-
-/* ==================== 6. PARTNERS ==================== */
-
-.partners-container {
-  margin: 0 206.565px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-  justify-items: center;
-  gap: 125px;
-}
-
-.partners-container img {
-  height: 126.576px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* ==================== 7. FOOTER ==================== */
+/* ==================== 5. FOOTER ==================== */
 .footer {
-  padding: 40px 0;
+  padding: 153px 0;
+  border-top: 3px solid var(--shadow);
 }
 
 .footer-container {
-  margin: 0 85.263px;
-}
-
-.footer-logo img {
-  height: 66px;
-  width: auto;
+  justify-self: center;
+  text-align: center;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 408px 274px 302px 1fr;
-  margin-top: 44px;
-}
-
-.footer-ratings {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.footer-ratings img {
-  height: 35px;
-  width: auto;
-}
-
-.footer-ratings figcaption {
-  font-size: 11px;
-  color: var(--shadow);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  margin-left: 3px;
+  margin-bottom: 80px;
 }
 
 .footer-col h4 {
+  text-align: left;
   letter-spacing: 1px;
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 400;
 }
-
-.footer-col li {
-  font-size: 14px;
-  margin-bottom: 7px;
-}
-
-.footer-col a:hover { color: var(--primary-accent); }
-
-.footer-social li { margin-bottom: 13.5px; }
-.footer-social img { height: 22px; width: auto; }
 
 .copyright {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 21px;
-  font-size: 13px;
-  color: var(--shadow);
+  font-size: 52px;
 }
 
 .copy-mark {
   display: inline-grid;
   place-items: center;
-  width: 18px;
-  height: 18px;
+  width: 78px;
+  height: 78px;
   border: 1px solid var(--shadow);
   border-radius: var(--radius-round);
-  font-size: 11px;
+  font-size: 52px;
 }
 
 /* ==================== RESPONSIVE ==================== */
